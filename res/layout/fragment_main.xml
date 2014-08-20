@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#40000000"
+
+    tools:context="com.android.systemui.killyun.MainActivity$PlaceholderFragment" >
+	<include 
+	    android:layout_width="80dp"
+	    android:layout_height="fill_parent"
+	    layout="@layout/app_theme"
+	    />
+
+    
+    <ImageView 
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:src="@drawable/line_bg"
+        android:id="@+id/line1"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        />
+    		<com.android.systemui.killyun.CircleProgress
+          android:id="@+id/traffic_image"
+          android:layout_centerHorizontal="true"
+          android:layout_alignTop="@id/line1"
+          style="@style/image_Theme"
+            />
+    		<TextView 
+    		    android:layout_toRightOf="@id/traffic_image"
+    		    android:id="@+id/traffic"
+    		    android:text="剩余：120M"
+    		    style="@style/Text_theme"
+    		    android:layout_alignTop="@id/line1"
+    		    />
+    			<TextView 
+    		    android:layout_toRightOf="@id/traffic_image"
+    		    android:id="@+id/traffic_all"
+    		    android:text="总共：300M"
+    		    style="@style/Text_theme"
+    		    android:layout_below="@id/traffic"
+    		    android:layout_marginTop="5dp"
+    		    />
+    		
+      <ImageView 
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:src="@drawable/line_bg"
+        android:id="@+id/line2"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/line1"
+        android:layout_alignParentRight="true"
+        />
+      			<com.android.systemui.killyun.CircleProgress 
+        			android:id="@+id/battery_image"
+        			android:layout_alignTop="@id/line2"
+        			android:layout_below="@id/traffic_image"
+        			style="@style/image_Theme"
+           			 />
+      			<TextView 
+      			    android:id="@+id/battery_remain"
+      			    android:layout_alignTop="@id/line2"
+      			    android:layout_below="@id/traffic_image"
+      			    android:layout_toRightOf="@id/battery_image"
+      			    style="@style/Text_theme"
+      			    android:text="51% 剩余"/>
+      			<TextView 
+      			    android:id="@+id/battery_hit"
+      			    android:layout_marginTop="5dp"
+      			    style="@style/Text_theme"
+      			    android:layout_below="@id/battery_remain"
+      			    android:layout_toRightOf="@id/battery_image"
+      			    android:text="预计可使用"/>
+      			<TextView 
+      			    style="@style/Text_theme"
+      			    android:id="@+id/battery_time"
+      			    android:layout_marginTop="5dp"
+      			    android:layout_below="@id/battery_hit"
+      			    android:layout_toRightOf="@id/battery_image"
+      			    android:text="16小时 32分"/>
+        <ImageView 
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:src="@drawable/line_bg"
+        android:id="@+id/line3"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/line2"
+        />		
+        		  <ImageView 
+        		      	android:layout_centerHorizontal="true"
+        		      	android:layout_alignTop="@id/line3"
+        				android:id="@+id/memory_image"
+        				android:layout_width="110dp" 
+        				android:layout_height="110dp"
+        				android:layout_marginTop="12dp"
+        				android:layout_below="@id/battery_image"
+            />
+        		  <TextView 
+        		      	android:id="@+id/memory_remain"
+        		      	android:layout_toRightOf="@id/memory_image"
+        		      	android:layout_below="@id/battery_image"
+        		      	android:layout_alignTop="@id/line3"
+        		      	style="@style/Text_theme"
+        		      	android:text="可用:521M"/>
+        		  <TextView 
+        		      	android:id="@+id/memory_all"
+        		      	android:layout_marginTop="5dp"
+        		      	style="@style/Text_theme"
+        		      	android:layout_below="@id/memory_remain"
+        		      	android:layout_toRightOf="@id/memory_image"
+        		      	android:text="总共： 2G"/>
+          <ImageView 
+        android:layout_width="260dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/line3"
+        android:padding="10dp"
+        android:id="@+id/line4"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/line_bg"
+        android:layout_centerHorizontal="true"
+        />
+      <include 
+          android:layout_width="260dp"
+          android:layout_height="wrap_content"
+          layout="@layout/activity_main"
+          android:layout_alignTop="@id/line4"
+          android:padding="10dp"
+          android:id="@+id/quick_panel"
+          android:layout_alignLeft="@id/line4"
+          android:layout_marginLeft="40dp"
+          android:layout_marginRight="40dp"
+      	   android:layout_marginTop="20dp"
+      	
+/>
+    	<ImageView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:src="@drawable/ic_qs_brightness_auto_off"
+    	    android:layout_below="@id/quick_panel"
+    	    android:layout_marginLeft="40dp"
+    	    android:layout_marginTop="20dp"
+    	    android:id="@+id/autobrightness"
+    	    android:layout_alignStart="@id/line4"/>
+      <SeekBar
+          
+          android:layout_below="@id/quick_panel"
+          android:layout_width="150dp"
+          android:layout_marginTop="15dp"
+          android:layout_toRightOf="@id/autobrightness"
+          android:layout_marginLeft="5dp"
+          android:layout_height="wrap_content"/>
+    
+
+  
+
+</RelativeLayout>

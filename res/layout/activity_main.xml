@@ -1,0 +1,43 @@
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/quicksettings"
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+     >
+     <TableRow>
+    <ImageView 
+        android:id="@+id/wifi"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_qs_wifi_off"
+       />
+    <ImageView 
+        android:id="@+id/airplane"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_qs_airplane_off"
+       />
+    
+    <ImageView 
+        android:id="@+id/mobile"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_qs_mobile_off"
+       />
+    <ImageView 
+        android:id="@+id/bluetooth"
+        android:padding="5dp"
+        android:layout_weight="1"
+        
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_qs_bluetooth_off"
+       />
+     </TableRow>
+</TableLayout>
